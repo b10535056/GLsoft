@@ -393,12 +393,14 @@ footer {
 @media screen and (max-width: 450px) {
 
     header {
-        position: relative;
+        position: fixed;
+        width: 100%;
         padding: 20px 20px ;
     
         .header-line {
             .navbar {
                 display: block;
+                color: rgb(131 111 93);
             }
         }
     
@@ -419,6 +421,8 @@ footer {
             border-radius: 10px;
             justify-content: center;
             transition: all .5s ease-in-out;
+            z-index: 1;
+            box-shadow: 0px 3px 20px rgb(0 0 0 / 45%);
 
             ul {
                 flex-direction: column;
@@ -446,6 +450,7 @@ footer {
 
         .fadeout {
             display: flex;
+            position: fixed;
             top: 17vh;
             right: 6vw;
             animation: fadeout .5s ease-in-out;
@@ -454,6 +459,7 @@ footer {
 
     section.pageone {
         padding: 30px 20px;
+        padding-top: 130px;
         gap: 20px;
 
         .productimg {
