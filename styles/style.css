@@ -294,47 +294,51 @@ footer .icon a {
   header img {
     width: 35%;
   }
-  header .nav {
-    display: none;
-  }
   header nav {
-    display: none;
+    display: flex;
     position: fixed;
+    top: 17vh;
+    right: -60%;
     width: 200px;
-    height: 250px;
+    height: 290px;
     background: rgb(213, 200, 178);
     border-radius: 10px;
     justify-content: center;
     transition: all 0.5s ease-in-out;
     z-index: 1;
     box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.45);
+    -webkit-animation: fadeout 0.5s ease-in-out;
+            animation: fadeout 0.5s ease-in-out;
   }
   header nav ul {
     flex-direction: column;
-    padding: 0;
     margin-bottom: 0;
     margin-top: 0;
+    padding: 0 10px;
+    width: 100%;
   }
   header nav ul .navlinks {
     display: flex;
     padding: 15px;
   }
-  header nav li {
+  header nav ul li {
     display: flex;
     justify-content: center;
-    margin: 10px 20px;
+    margin: 0;
     padding: 10px 20px;
     background: none;
   }
-  header nav li a {
+  header nav ul li:hover {
+    background: rgb(131, 111, 93);
+  }
+  header nav ul li a {
     font-size: 25px;
   }
+  header nav ul li a:hover {
+    color: white;
+  }
   header .fadeout {
-    display: flex;
-    top: 17vh;
     right: 6vw;
-    -webkit-animation: fadeout 0.5s ease-in-out;
-            animation: fadeout 0.5s ease-in-out;
   }
 
   section.pageone {
@@ -384,17 +388,21 @@ footer .icon a {
 }
 @-webkit-keyframes fadeout {
   from {
+    opacity: 0;
     transform: translatex(100%);
   }
   to {
+    opacity: 1;
     transform: translatex(0);
   }
 }
 @keyframes fadeout {
   from {
+    opacity: 0;
     transform: translatex(100%);
   }
   to {
+    opacity: 1;
     transform: translatex(0);
   }
 }/*# sourceMappingURL=style.css.map */

@@ -408,52 +408,66 @@ footer {
             width: 35%;
         }
 
-        .nav {
-            display: none;
-        }
+        // .nav {
+        //     display: none;
+        // }
     
         nav {
-            display: none;
+            display: flex;
             position: fixed;
+            top: 17vh;
+            right: -60%;
             width: 200px;
-            height: 250px;
+            height: 290px;
             background: rgb(213 200 178);
             border-radius: 10px;
             justify-content: center;
             transition: all .5s ease-in-out;
             z-index: 1;
             box-shadow: 0px 3px 20px rgb(0 0 0 / 45%);
+            animation: fadeout .5s ease-in-out;
 
             ul {
                 flex-direction: column;
-                padding: 0;
                 margin-bottom: 0;
                 margin-top: 0;
+                padding: 0 10px;
+                width: 100%;
 
                 .navlinks {
                     display: flex;
                     padding: 15px;
                 }
-            }
 
-            li {
-                display: flex;
-                justify-content: center;
-                margin: 10px 20px;
-                padding: 10px 20px;
-                background: none;
-                a {
-                    font-size: 25px;
+                li {
+                    display: flex;
+                    justify-content: center;
+                    margin: 0;
+                    padding: 10px 20px;
+                    background: none;
+
+                    &:hover {
+                        background: rgb(131 111 93);
+                    }
+    
+                    a {
+                        font-size: 25px;
+                        &:hover {
+                            color: white;
+                        }
+                    }
                 }
             }
         } 
 
         .fadeout {
-            display: flex;
-            top: 17vh;
-            right: 6vw;
-            animation: fadeout .5s ease-in-out;
+            right: 6vw;  
         }
+
+        // .fadein {
+        //     display: flex;
+        //     animation: fadein .5s ease-in-out;
+        // }
     }
 
     section.pageone {
@@ -514,8 +528,20 @@ footer {
 
 @keyframes fadeout {
     from {
+        opacity: 0;
         transform: translatex(100%);
     } to {
+        opacity: 1;
         transform: translatex(0);
     }
 }
+
+// @keyframes fadein {
+//     from {
+//         opacity: 1;
+//         transform: translatex(0);
+//     } to {
+//         opacity: 0;
+//         transform: translatex(100%);
+//     }
+// }
