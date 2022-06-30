@@ -331,7 +331,6 @@ footer .icon a {
   }
   header .fadeout {
     display: flex;
-    position: fixed;
     top: 17vh;
     right: 6vw;
     -webkit-animation: fadeout 0.5s ease-in-out;
@@ -360,6 +359,20 @@ footer .icon a {
 @media screen and (max-width: 400px) {
   section.pageone {
     padding: 20px 15px;
+    padding-top: 130px;
+    gap: 15px;
+  }
+  section.pageone .productimg {
+    height: 150px;
+  }
+  section.pageone .productimg img {
+    width: 150px;
+  }
+}
+@media screen and (max-width: 375px) {
+  section.pageone {
+    padding: 20px 15px;
+    padding-top: 130px;
     gap: 15px;
   }
   section.pageone .productimg {
