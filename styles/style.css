@@ -1,0 +1,173 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body header {
+  margin-top: 20px;
+}
+body header h1 {
+  display: flex;
+  justify-content: center;
+}
+body form {
+  display: flex;
+  flex-direction: column;
+}
+body form .form-control {
+  position: relative;
+}
+body form .form-control i {
+  position: absolute;
+  top: 50px;
+  right: 15px;
+  font-size: 21px;
+}
+body form .form-control input {
+  position: relative;
+  width: 100%;
+  padding: 13px 20px;
+  border-radius: 25px;
+  margin-top: 35px;
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  font-size: 18px;
+  color: black;
+}
+body form .form-control input[type=date] {
+  padding-top: 23px;
+  padding-bottom: 5px;
+}
+body form .form-control input[type=date]::before {
+  content: "生日";
+  position: absolute;
+  top: 4px;
+  left: 20px;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.5);
+}
+body form .form-control .success {
+  border-color: rgb(110, 207, 39);
+}
+body form .form-control .error {
+  border-color: rgb(255, 19, 19);
+}
+body form .form-control .cross {
+  display: none;
+}
+body form .form-control .cross i.fa-solid.fa-circle-exclamation {
+  color: rgb(255, 19, 19);
+  visibility: visible;
+}
+body form .form-control .check {
+  display: none;
+}
+body form .form-control .check i.fa-solid.fa-circle-check {
+  color: rgb(110, 207, 39);
+  visibility: visible;
+}
+body form .form-control p {
+  position: absolute;
+  top: 92px;
+  left: 15px;
+  color: red;
+}
+body form small {
+  position: absolute;
+  left: 17px;
+  top: 90px;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.5);
+}
+body form .areatext {
+  position: relative;
+  width: 500px;
+}
+body form .areatext p {
+  position: absolute;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.5);
+  top: 38px;
+  left: 21px;
+  z-index: 1;
+}
+body form select {
+  position: relative;
+  padding: 22px 12px 5px 19px;
+  width: 50%;
+  border-radius: 25px;
+  margin-top: 35px;
+  margin-bottom: 0;
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  font-size: 18px;
+  align-items: center;
+  justify-content: space-between;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+body form select::after {
+  content: "縣市";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body form i.fa-solid.fa-caret-down {
+  position: absolute;
+  font-size: 19px;
+  top: 50px;
+  left: 220px;
+}
+body .btn {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0px;
+}
+body button {
+  width: 250px;
+  height: 40px;
+  border: none;
+  background-color: rgb(116, 87, 61);
+  color: white;
+  border-radius: 15px;
+}
+
+@media screen and (max-width: 600px) {
+  body form input {
+    padding: 10px 15px;
+    width: 400px;
+  }
+  body form .invalidpassword {
+    top: 85spx;
+  }
+  body form .areatext {
+    width: 400px;
+  }
+  body form i.fa-solid.fa-caret-down {
+    left: 170px;
+  }
+}
+@media screen and (max-width: 500px) {
+  body form input {
+    padding: 10px 15px;
+    width: 300px;
+    font-size: 16px;
+  }
+  body form .areatext {
+    width: 300px;
+  }
+  body form select {
+    font-size: 16px;
+  }
+  body form i.fa-solid.fa-caret-down {
+    left: 125px;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -14,32 +14,157 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="pagetwo.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
     <header><h1>註冊會員</h1></header>
-    <form action="" method="GET">
-      <input type="text" placeholder="中文姓名" required />
-      <input type="text" placeholder="英文姓名" required />
+    <form>
+      <div class="form-control">
+        <input id="Zh_name" type="text" placeholder="中文姓名" />
+        <div class="cross">
+          <i class="fa-solid fa-circle-exclamation"></i>
+        </div>
+        <div class="check">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <p></p>
+      </div>
+      <div class="form-control">
+        <input id="En_name" type="text" placeholder="英文姓名" />
+        <div class="cross">
+          <i class="fa-solid fa-circle-exclamation"></i>
+        </div>
+        <div class="check">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <p></p>
+      </div>
+      <div class="form-control">
+        <input
+          id="email"
+          type="email"
+          placeholder="信箱"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+          required
+        />
+        <div class="cross">
+          <i class="fa-solid fa-circle-exclamation"></i>
+        </div>
+        <div class="check">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <p></p>
+      </div>
+
+      <div class="form-control">
+        <input
+          id="password"
+          type="password"
+          placeholder="密碼"
+          pattern="[0-9a-zA-Z]{6,20}"
+          required
+        />
+        <small>請輸入6到20英數字密碼</small>
+        <div class="cross">
+          <i class="fa-solid fa-circle-exclamation"></i>
+        </div>
+        <div class="check">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <p></p>
+      </div>
+
+      <div class="form-control">
+        <input
+          id="checkpassword"
+          type="password"
+          placeholder="確認密碼"
+          pattern="[0-9a-zA-Z]{6,20}"
+          required
+        />
+        <div class="cross">
+          <i class="fa-solid fa-circle-exclamation"></i>
+        </div>
+        <div class="check">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <p></p>
+      </div>
+
+      <div class="form-control">
+        <input id="identification" type="text" placeholder="身份證" required />
+        <div class="cross">
+          <i class="fa-solid fa-circle-exclamation"></i>
+        </div>
+        <div class="check">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <p></p>
+      </div>
+
+      <div class="form-control">
+        <input id="date" type="date" required />
+        <div class="cross">
+          <i class="fa-solid fa-circle-exclamation"></i>
+        </div>
+        <div class="check">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+      </div>
+
+      <div class="form-control">
+        <input
+          id="phonenumber"
+          type="number"
+          placeholder="手機"
+          pattern="[0-9]"
+          required
+        />
+        <div class="cross">
+          <i class="fa-solid fa-circle-exclamation"></i>
+        </div>
+        <div class="check">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <p></p>
+      </div>
+
+      <div class="areatext">
+        <p>縣市</p>
+        <select name="area" id="area">
+          <optgroup label="Taipei">
+            <option value="">--請選擇--</option>
+            <option value="中正區">台北市 中正區</option>
+            <option value="中山區">台北市 中山區</option>
+            <option value="信義區">台北市 信義區</option>
+            <option value="士林區">台北市 士林區</option>
+            <option value="大同區">台北市 大同區</option>
+            <option value="內湖區">台北市 大同區</option>
+          </optgroup>
+        </select>
+        <i class="fa-solid fa-caret-down"></i>
+        <p></p>
+      </div>
+
+      <div class="form-control">
+        <input id="street" type="text" placeholder="街區" required />
+        <div class="cross">
+          <i class="fa-solid fa-circle-exclamation"></i>
+        </div>
+        <div class="check">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <p></p>
+      </div>
+
+      <div class="btn">
+        <button id="submitbtn" type="submit">送出</button>
+      </div>
     </form>
-    <form action="" method="POST">
-      <input type="email" placeholder="信箱" required />
-      <input type="password" placeholder="密碼" required />
-      <input type="password" placeholder="確認密碼" required />
-    </form>
-    <form action="" method="POST">
-      <input type="text" placeholder="身份證" required />
-      <input type="date" required />
-      <input type="number" placeholder="手機" required />
-      <select name="" id="" required>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-      </select>
-      <input type="text" placeholder="街區" required />
-    </form>
+    <script
+      src="https://kit.fontawesome.com/855cbef07d.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./pagetwo.js"></script>
   </body>
 </html>

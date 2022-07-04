@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    header {
+        margin-top: 20px;
+
+        h1 {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        // width: 50vw;
+        
+        .form-control {
+            position: relative;
+
+            i {
+                position: absolute;
+                top: 50px;
+                right: 15px;
+                font-size: 21px;
+                // visibility: hidden;
+            }
+
+            input {
+                position: relative;
+                width: 100%;
+                padding: 13px 20px;
+                border-radius: 25px;
+                margin-top: 35px;
+                border: 2px solid rgba(0, 0, 0, 0.4);
+                font-size: 18px;
+                color: black;
+            }
+
+            input[type="date"] {
+                padding-top: 23px;
+                padding-bottom: 5px;
+    
+                &::before {
+                    content: "生日";
+                    position: absolute;
+                    top: 4px;
+                    left: 20px;
+                    font-size: 15px;
+                    color: rgba(0, 0 ,0 ,.5);
+                }
+            }
+
+            .success {
+                border-color: rgb(110 207 39);
+            }
+
+            .error {
+                border-color: rgb(255, 19, 19);
+            } 
+
+            .cross {
+                display: none;
+
+                i.fa-solid.fa-circle-exclamation {
+                    color: rgb(255, 19, 19);
+                    visibility: visible;
+                }
+            }
+
+            .check {
+                display: none;
+
+                i.fa-solid.fa-circle-check {
+                    color: rgb(110 207 39);
+                    visibility: visible;
+                }
+            }
+
+            p {
+                position: absolute;
+                top: 92px;
+                left: 15px;
+                color: red;
+            }
+
+        }
+
+        small {
+            position: absolute;
+            left: 17px;
+            top: 90px;
+            font-size: 15px;
+            color: rgba(0, 0 ,0 ,.5);
+        }
+
+        .areatext {
+            position: relative;
+            width: 500px;
+            
+            p {
+                position: absolute;
+                font-size: 15px;
+                color: rgba(0, 0, 0, 0.5);
+                top: 38px;
+                left: 21px;
+                z-index: 1;
+            }
+        }
+
+        select {
+            position: relative;
+            padding: 22px 12px 5px 19px;
+            width: 50%;
+            border-radius: 25px;
+            margin-top: 35px;
+            margin-bottom: 0;
+            border: 2px solid rgba($color: #000000, $alpha: .4);
+            font-size: 18px;
+            align-items: center;
+            justify-content: space-between;
+            appearance: none;
+
+            &::after {
+                content: "縣市";
+                position: absolute;
+                top: 0;
+                left: 0;
+                // font-size: 15px;
+                // color: rgba(0, 0 ,0 ,.5);
+            }
+        }
+
+        i.fa-solid.fa-caret-down {
+            position: absolute;
+            font-size: 19px;
+            top: 50px;
+            left: 220px;
+        }
+    }
+
+    .btn {
+        display: flex;
+        justify-content: center;
+        margin: 50px 0px;
+    }
+
+    button {
+        width: 250px;
+        height: 40px;
+        border: none;
+        background-color: rgb(116, 87, 61);
+        color: white;
+        border-radius: 15px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        form {
+            // align-items: center;
+            input {
+                padding: 10px 15px;
+                width: 400px;
+            }
+
+            .invalidpassword {
+                top: 85spx;
+            }
+
+            .areatext {
+                width: 400px;
+            }
+
+            i.fa-solid.fa-caret-down {
+                left: 170px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        form {
+            // align-items: center;
+            input {
+                padding: 10px 15px;
+                width: 300px;
+                font-size: 16px;
+            }
+
+            .areatext {
+                width: 300px;
+            }
+
+            // small {
+            //     top: 80px;
+            // }
+
+            select {
+                font-size: 16px;
+            }
+
+            i.fa-solid.fa-caret-down {
+                left: 125px;
+            }
+        }
+    }
+}
