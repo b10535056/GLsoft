@@ -53,16 +53,38 @@ function checkInputs() {
     email.parentElement.children[3].innerHTML = "";
   }
 
+  //   if (passwordvalue === "") {
+  //     setError(password);
+  //     password.parentNode.children[1].style.display = "block";
+  //     password.parentNode.children[1].innerHTML = "";
+  //     password.parentNode.children[4].innerHTML = "Could not be blank !!!";
+  //   } else if (passwordvalue.length < 6 || passwordvalue.length > 20) {
+  //     setError(password);
+  //     password.parentNode.children[1].innerHTML = "";
+  //     password.parentNode.children[4].innerHTML = "Invalid Password !!!";
+  //   } else {
+  //     setSuccess(password);
+  //     password.parentNode.children[1].innerHTML = "請輸入6到20英數字密碼";
+  //     password.parentNode.children[4].innerHTML = "";
+  //   }
+
   if (passwordvalue === "") {
     setError(password);
+    console.log(password.parentNode);
+    password.parentNode.children[2].style.display = "block";
+    password.parentNode.children[3].style.display = "none";
     password.parentNode.children[1].innerHTML = "";
     password.parentNode.children[4].innerHTML = "Could not be blank !!!";
   } else if (passwordvalue.length < 6 || passwordvalue.length > 20) {
     setError(password);
+    password.parentNode.children[2].style.display = "block";
+    password.parentNode.children[3].style.display = "none";
     password.parentNode.children[1].innerHTML = "";
     password.parentNode.children[4].innerHTML = "Invalid Password !!!";
   } else {
     setSuccess(password);
+    password.parentNode.children[2].style.display = "none";
+    password.parentNode.children[3].style.display = "block";
     password.parentNode.children[1].innerHTML = "請輸入6到20英數字密碼";
     password.parentNode.children[4].innerHTML = "";
   }
@@ -108,13 +130,13 @@ function checkInputs() {
     setSuccess(phonenumber);
   }
 
-  if (area.value === null) {
-    setError(area);
-    street.parentElement.children[3].innerHTML = "Could not be blank !!!";
-  } else {
-    setSuccess(area);
-    street.parentElement.children[3].innerHTML = "";
-  }
+  //   if (area.value === "") {
+  //     setError(area);
+  //     street.parentElement.children[3].innerHTML = "Could not be blank !!!";
+  //   } else {
+  //     setSuccess(area);
+  //     street.parentElement.children[3].innerHTML = "";
+  //   }
 
   if (streetvalue === "") {
     setError(street);
@@ -129,7 +151,6 @@ function setError(input) {
   input.className = "error";
   input.parentNode.children[1].style.display = "block";
   input.parentNode.children[2].style.display = "none";
-  console.log(input.parentNode.children[1]);
   //   input.parentNode.className = "fa-solid fa-circle-exclamation";
 }
 

@@ -65,14 +65,12 @@ body form .form-control .cross {
 }
 body form .form-control .cross i.fa-solid.fa-circle-exclamation {
   color: rgb(255, 19, 19);
-  visibility: visible;
 }
 body form .form-control .check {
   display: none;
 }
 body form .form-control .check i.fa-solid.fa-circle-check {
   color: rgb(110, 207, 39);
-  visibility: visible;
 }
 body form .form-control p {
   position: absolute;
