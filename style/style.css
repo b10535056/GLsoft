@@ -4,23 +4,301 @@
   box-sizing: border-box;
 }
 
-.banner {
-  background-color: aquamarine;
+nav {
   width: 100%;
-  height: 300px;
-  overflow: scroll;
-  display: flex;
+  height: 400px;
+  overflow: hidden;
   position: relative;
 }
-.banner .bannerimg {
-  position: absolute;
-  background: rgb(90, 146, 230);
-  width: 100%;
-  height: 300px;
+nav .carousel .carousel-inner .carousel-item img {
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+section.firstpage {
   display: flex;
   justify-content: center;
-  align-items: center;
+  padding: 50px 100px;
+  padding-top: 0;
+  width: 100%;
 }
-.banner .bannerimg h1 {
-  font-size: 40px;
+section.firstpage .product {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  height: 700px;
+}
+section.firstpage .product .imgview {
+  width: 500px;
+  height: 500px;
+}
+section.firstpage .product .imgview img {
+  width: 100%;
+  background-size: cover;
+}
+section.firstpage .product .imgslide {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 20px;
+  width: 500px;
+  height: 100px;
+}
+section.firstpage .product .imgslide .slideimgs {
+  width: 100px;
+  height: 100px;
+}
+section.firstpage .product .imgslide .slideimgs img {
+  width: 100%;
+  background-size: cover;
+}
+section.firstpage .productinfo {
+  display: flex;
+  width: 50%;
+  padding: 50px;
+  flex-direction: column;
+  justify-content: space-around;
+}
+section.firstpage .productinfo h1 {
+  font-size: 30px;
+}
+section.firstpage .productinfo table {
+  width: 100%;
+  border-collapse: collapse;
+}
+section.firstpage .productinfo table tr {
+  border-bottom: 1px solid rgba(81, 81, 81, 0.5);
+  display: flex;
+  justify-content: space-between;
+}
+section.firstpage .productinfo table tr td {
+  font-size: 20px;
+  padding: 10px 20px;
+}
+section.firstpage .productinfo h2 {
+  font-size: 30px;
+}
+section.firstpage .productinfo #add_cart {
+  border: none;
+  border-radius: 8px;
+  margin-top: 80px;
+  width: 250px;
+  height: 60px;
+  font-size: 30px;
+  background: #9d8a73;
+  color: white;
+  cursor: pointer;
+}
+
+section.pagetwo {
+  width: 100%;
+  padding: 50px 100px;
+  padding-top: 0;
+}
+section.pagetwo .tab-content .active {
+  padding: 30px;
+}
+section.pagetwo ul li:hover {
+  background: rgba(95, 78, 59, 0.5);
+  color: white;
+}
+section.pagetwo ul li button {
+  color: #664d03;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 200px;
+  background: rgb(157, 138, 114);
+  color: white;
+}
+
+@media screen and (max-width: 1300px) {
+  section.firstpage {
+    padding: 50px 80px;
+    padding-top: 0;
+  }
+  section.pagetwo {
+    padding: 50px 80px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  section.firstpage {
+    padding: 50px 40px;
+    padding-top: 0;
+  }
+  section.pagetwo {
+    padding: 50px 40px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  section.firstpage {
+    padding: 30px 30px;
+    padding-top: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  nav {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    position: relative;
+  }
+  nav div#carouselExampleSlidesOnly {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  nav div#carouselExampleSlidesOnly h1 {
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  section.firstpage {
+    flex-wrap: wrap;
+    padding-top: 30px;
+  }
+  section.firstpage .product {
+    width: 100%;
+    height: auto;
+  }
+  section.firstpage .product .imgview {
+    width: 400px;
+    height: 400px;
+  }
+  section.firstpage .product .imgview img {
+    width: 100%;
+    background-size: cover;
+  }
+  section.firstpage .product .imgslide {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 400px;
+    height: 80px;
+  }
+  section.firstpage .product .imgslide .slideimgs {
+    width: 100px;
+    height: 100px;
+  }
+  section.firstpage .product .imgslide .slideimgs img {
+    width: 100%;
+    background-size: cover;
+  }
+  section.firstpage .productinfo {
+    width: 100%;
+    padding: 0;
+    margin-top: 20px;
+  }
+  section.firstpage .productinfo h1 {
+    font-size: 30px;
+  }
+  section.firstpage .productinfo table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  section.firstpage .productinfo table tr {
+    border-bottom: 1px solid rgba(81, 81, 81, 0.5);
+    display: flex;
+    justify-content: space-between;
+  }
+  section.firstpage .productinfo table tr td {
+    font-size: 20px;
+    padding: 10px 20px;
+  }
+  section.firstpage .productinfo h2 {
+    font-size: 30px;
+    margin-top: 40px;
+  }
+  section.firstpage .productinfo #add_cart {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    height: 60px;
+    font-size: 30px;
+    cursor: pointer;
+    background: #746451;
+  }
+  section.pagetwo {
+    width: 100%;
+    padding: 20px 30px;
+    padding-top: 0;
+  }
+  section.pagetwo ul li:hover {
+    background: rgba(95, 78, 59, 0.5);
+    color: white;
+  }
+  section.pagetwo ul li:active {
+    background: rgba(95, 78, 59, 0.5);
+    color: white;
+  }
+  section.pagetwo ul li button {
+    color: #664d03;
+  }
+  section.pagetwo .tab-content .active {
+    padding: 30px 0;
+  }
+  footer {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (max-width: 450px) {
+  nav {
+    height: 140px;
+  }
+  section.firstpage .product {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+  section.firstpage .product .imgview {
+    width: 350px;
+    height: 350px;
+  }
+  section.firstpage .product .imgview img {
+    width: 100%;
+    background-size: cover;
+  }
+  section.firstpage .product .imgslide {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 350px;
+    height: 80px;
+  }
+  section.firstpage .product .imgslide .slideimgs {
+    width: 100px;
+    height: 100px;
+  }
+  section.firstpage .product .imgslide .slideimgs img {
+    width: 100%;
+    background-size: cover;
+  }
+  section.firstpage .productinfo {
+    width: 100%;
+    padding: 0;
+  }
+  section.firstpage .productinfo h1 {
+    font-size: 25px;
+  }
+  section.firstpage .productinfo table tr td {
+    font-size: 18px;
+  }
+  section.pagetwo {
+    width: 100%;
+    padding: 20px 30px;
+  }
 }/*# sourceMappingURL=style.css.map */

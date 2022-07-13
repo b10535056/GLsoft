@@ -9,10 +9,16 @@
     <meta name="Author" content="Ethan_Chen" />
     <title>PDP layout</title>
     <link rel="stylesheet" href="./style/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <nav class="banner">
-      <div class="bannerimg">
+    <nav>
+      <!-- <div class="bannerimg">
         <h1>Banner1(carousel)</h1>
       </div>
       <div class="bannerimg">
@@ -23,8 +29,219 @@
       </div>
       <div class="bannerimg">
         <h1>Banner4(carousel)</h1>
+      </div> -->
+      <div
+        id="carouselExampleSlidesOnly"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./src/banner.jpeg" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="./src/banner2.jpeg" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="./src/water.png" class="d-block w-100" alt="..." />
+          </div>
+        </div>
       </div>
     </nav>
+    <section class="firstpage">
+      <div class="product">
+        <div id="imgview" class="imgview">
+          <img src="./src/22-8.jpeg" alt="" />
+        </div>
+        <div class="imgslide">
+          <div class="slideimgs">
+            <img src="./src/22-8.jpeg" alt="" />
+          </div>
+          <div class="slideimgs">
+            <img src="./src/23-6.jpeg" alt="" />
+          </div>
+          <div class="slideimgs">
+            <img src="./src/24-7.jpeg" alt="" />
+          </div>
+          <div class="slideimgs">
+            <img src="./src/25-7.jpeg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="productinfo">
+        <h1>豐收隨身杯</h1>
+        <br />
+        <table>
+          <tr>
+            <td>編號</td>
+            <td>1A02B01650104</td>
+          </tr>
+          <tr>
+            <td>釉色</td>
+            <td>櫻花粉 + 貼花</td>
+          </tr>
+          <tr>
+            <td>工藝</td>
+            <td>貼花工藝</td>
+          </tr>
+          <tr style="border-bottom: none">
+            <td>尺寸</td>
+            <td>72 x 72 x 151 mm</td>
+          </tr>
+        </table>
+        <h2>$2500</h2>
+        <button id="add_cart">Add Cart</button>
+      </div>
+    </section>
+    <section class="pagetwo">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="home-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#home-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="home-tab-pane"
+            aria-selected="true"
+          >
+            關於乾唐軒
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="profile-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#profile-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="profile-tab-pane"
+            aria-selected="false"
+          >
+            品牌故事
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="contact-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#contact-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="contact-tab-pane"
+            aria-selected="false"
+          >
+            產品介紹
+          </button>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div
+          class="tab-pane fade show active"
+          id="home-tab-pane"
+          role="tabpanel"
+          aria-labelledby="home-tab"
+          tabindex="0"
+        >
+          乾唐軒1986年成立於臺灣，創辦人:于春明。乾唐軒ACERA，為藝術陶瓷(art
+          ceramic)之意涵，產品題材源於中華文化，並以現代設計手法轉化，將藝術融合於生活中，創造獨特品牌個性。獨創「乾唐彩
+          TANGCAI」品牌，融合彩釉和西方噴繪技法，呈現出現代東方華麗高貴的陶藝風格。1998年秉承藝術、科技、健康產品革新理念，融入生活陶瓷，創造“活瓷”品牌之產品，以日用科技陶瓷結合文化、藝術、科技元素，帶給消費者健康的優質生活。唐軒以「敬自然惜萬物」為核心理念，充份利用有限資源，以文化創意和先進製作工藝，
+          打造現代生活精品。
+        </div>
+        <div
+          class="tab-pane fade"
+          id="profile-tab-pane"
+          role="tabpanel"
+          aria-labelledby="profile-tab"
+          tabindex="0"
+        >
+          由一個不到一百平米的工作坊開始，一個躊躇滿志亟待事業轉型的年輕人，所有對陶瓷藝術的牽掛和愛戀，還有一個名
+          字的念想——乾唐軒，「乾」為天，天意為大，天下為廣；「唐」緣自和觸動于唐三彩，以色為美，唐皇呈現；「軒」器宇軒昂，氣概不凡
+          。
+          歷經數十年對生活的關注和對藝術的追求，一場21世紀的新瓷器時代於焉誕生，蓄勢待發。所有的方向都需要天意，所有的成功都不是偶然，乾唐軒因為喜歡並為唐三彩的藝術所觸動，於是在人生事業的轉角處看見希望，從一個銷售禮品的小店打造出目前的市場規模。人生的際遇就像燒製陶瓷作品一樣變化莫測，乾唐軒從臺灣到大陸，從只有數個夥伴的工作坊到現在足以供應全球的陶瓷製作基地，並放眼世界，注入與全球化同步的時尚元素，把可以量化和有價的陶瓷作品賦予新的生命和藝術價值，它在豐饒的土地上成長、茁壯並且開出一朵朵美麗的花。它的成功緣自於泥土也回歸於大地，泥土是有記憶的，這些記憶是對過去的堅持也是對未來的期待。任何陶瓷作品在燒製的過程中很繁複且不易控制，也因為如此，乾唐軒讓它的陶瓷作品「活」了起來，用心、用感情，用源源不斷的創意，以
+          生命的源泉打造生活的文化藝術和現代製瓷科技。
+          乾唐軒，回到初始，忠於初衷，敬自然，惜萬物 ；
+          新生活，心感動，欣喜常在。
+        </div>
+        <div
+          class="tab-pane fade"
+          id="contact-tab-pane"
+          role="tabpanel"
+          aria-labelledby="contact-tab"
+          tabindex="0"
+        >
+          來自早期歐洲貴族的家徽——蜜蜂， 代表家族團結一心和尊貴身份的隱喻，
+          同時也是勤勞無私的象徵。杯身以立體的六角形蜂巢和
+          靈動金黃的小蜜蜂為設計主體， 每只小蜜蜂的翅膀、身體
+          和觸角都勾勒出細緻輪廓， 別致的工藝表現讓每只小蜜蜂都質感滿滿，
+          帶來生靈活現的觸感。描金而成的蜜蜂在光照下栩栩如生，
+          好似在花叢中飛舞躍動，俏皮可愛， 勾勒出蜜蜂采蜜回巢時豐收喜悅的場景。
+        </div>
+      </div>
+      <!-- <div class="tabs">
+        <div class="tab1">Tab1</div>
+        <div class="tab2">Tab2</div>
+        <div class="tab3">Tab3</div>
+      </div>
+      <div class="tabparagraph">
+        <div class="paragraph1">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis
+            expedita incidunt dolor consectetur alias? Voluptates placeat
+            quibusdam qui libero officia tenetur tempora. Ipsum id dolore nemo
+            earum officiis, quisquam qui. Excepturi placeat laborum tempora.
+            Facilis aperiam eos earum praesentium totam quisquam placeat
+            recusandae fuga doloremque natus at, eaque dignissimos cupiditate
+            modi error ipsam adipisci asperiores! Est incidunt obcaecati
+            laboriosam itaque. Sint, placeat fugiat? Harum placeat nisi a,
+            voluptas qui eos mollitia et nulla ducimus unde dolores beatae
+            veniam voluptate ab, praesentium consequuntur animi sit eum iusto
+            enim itaque at velit.
+          </p>
+        </div>
+        <div class="paragraph2">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis
+            expedita incidunt dolor consectetur alias? Voluptates placeat
+            quibusdam qui libero officia tenetur tempora. Ipsum id dolore nemo
+            earum officiis, quisquam qui. Excepturi placeat laborum tempora.
+            Facilis aperiam eos earum praesentium totam quisquam placeat
+            recusandae fuga doloremque natus at, eaque dignissimos cupiditate
+            modi error ipsam adipisci asperiores! Est incidunt obcaecati
+            laboriosam itaque. Sint, placeat fugiat? Harum placeat nisi a,
+            voluptas qui eos mollitia et nulla ducimus unde dolores beatae
+            veniam voluptate ab, praesentium consequuntur animi sit eum iusto
+            enim itaque at velit.
+          </p>
+        </div>
+        <div class="paragraph3">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis
+            expedita incidunt dolor consectetur alias? Voluptates placeat
+            quibusdam qui libero officia tenetur tempora. Ipsum id dolore nemo
+            earum officiis, quisquam qui. Excepturi placeat laborum tempora.
+            Facilis aperiam eos earum praesentium totam quisquam placeat
+            recusandae fuga doloremque natus at, eaque dignissimos cupiditate
+            modi error ipsam adipisci asperiores! Est incidunt obcaecati
+            laboriosam itaque. Sint, placeat fugiat? Harum placeat nisi a,
+            voluptas qui eos mollitia et nulla ducimus unde dolores beatae
+            veniam voluptate ab, praesentium consequuntur animi sit eum iusto
+            enim itaque at velit.
+          </p>
+        </div>
+      </div> -->
+    </section>
+    <footer>
+      <h1>footer</h1>
+    </footer>
+    <script src="./script.js" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
   </body>
-  <script src="./script.js" defer></script>
 </html>
